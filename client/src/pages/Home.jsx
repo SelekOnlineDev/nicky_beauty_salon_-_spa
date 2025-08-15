@@ -17,7 +17,7 @@ const Container = styled.div`
   padding: 0 2rem;
 
   @media (max-width: 1224px) {
-    padding: 4.5rem 2rem;
+    padding: 4.5rem 1rem;
   }
 `;
 
@@ -41,7 +41,7 @@ const Content = styled.div`
 `;
 
 const TextBlock = styled.div`
-  margin: 2rem;
+  margin: 1rem;
 `;
 
 const Tag = styled.div`
@@ -140,7 +140,7 @@ const WhiteButton = styled.button`
 const ImageBlock = styled.div`
   position: relative;
   display: flex;
-  margin: 2rem;
+  margin: 0.5rem;
   justify-content: center;
   align-items: center;
 
@@ -200,9 +200,9 @@ const Img = styled.img`
 
 const Rating = styled.div`
   position: absolute;
-  bottom: -40px;
-  left: -40px;
-  margin-left: 7px;
+  bottom: -50px;
+  left: -20px;
+  margin-left: 9px;
   background-color: oklch(95.4% .038 75.164);
   display: flex;
   align-items: center;
