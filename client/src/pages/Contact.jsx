@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaFacebookF, FaInstagram, FaTiktok, FaPhoneAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
 import GoogleMap from "../components/GoogleMap";
+import emailjs from '@emailjs/browser';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 4.5rem 1.5rem;
   font-family: 'Poppins', sans-serif;
 `;
 
@@ -152,13 +152,40 @@ const MapLink = styled.a`
 `;
 
 const Contact = () => {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [sentMessage, setSentMessage] = useState('');
+
+  useEffect(() => {
+    emailjs.init('aJZhJBZhYwov8guBl'); 
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
-    window.location.href = `mailto:moccaguguk10@gmail.com?subject=Message from ${name} (${email})&body=${encodeURIComponent(message)}`;
+    setIsSending(true);
+
+    emailjs.sendForm(
+      'service_mwklljm',  // <-- SMTP service ID
+      'template_bis39r5',  // <-- Template ID
+      form.current,
+      'aJZhJBZhYwov8guBl'   // <-- Public Key
+    )
+    .then(() => {
+      setSentMessage('Message sent successfully!');
+      form.current.reset();
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
+      setSentMessage('Failed to send message. Please try again.');
+    })
+    .finally(() => {
+      setIsSending(false);
+      setTimeout(() => setSentMessage(''), 4000);
+    })
+    .catch((error) => {
+      console.error('EmailJS error details:', error);
+      setSentMessage('Failed to send message. Please try again.');
+    });
   };
 
   return (
@@ -167,9 +194,9 @@ const Contact = () => {
       <Subtitle>
         Find us in the heart of Kuta. Look for our refreshing drinks stall on the street, and we'll guide you to our tranquil salon just a few steps away.
       </Subtitle>
-      
+
       <CardGrid>
-        {/* Contact Information */}
+        {/* Contact Info */}
         <Card>
           <CardTitle>
             <FaPhoneAlt /> Contact Information
@@ -202,11 +229,14 @@ const Contact = () => {
           <CardContent>
             Ready to experience authentic Balinese beauty and relaxation? Contact us to book your appointment or simply visit our drinks stall to start your journey.
           </CardContent>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={form} onSubmit={handleSubmit}>
             <Input type="text" name="name" placeholder="Your Name" required />
             <Input type="email" name="email" placeholder="Your Email" required />
             <TextArea name="message" placeholder="Your Message" required />
-            <SubmitButton type="submit">Send Message</SubmitButton>
+            <SubmitButton type="submit" disabled={isSending}>
+              {isSending ? 'Sending...' : 'Send Message'}
+            </SubmitButton>
+            {sentMessage && <p>{sentMessage}</p>}
           </Form>
         </Card>
 

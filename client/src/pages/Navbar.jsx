@@ -5,10 +5,14 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import logoImg from '../assets/logo.png';
 
 const Nav = styled.nav`
+  position: fixed; 
+  width: 100%;
+  height: 75px;
+  margin-top: -0.5rem;
   background-color: #fff;
   border-bottom: 2px solid oklch(95.4% .038 75.164);
   font-family: 'Poppins', sans-serif;
-  height: 75px;
+  z-index: 1000;
 `;
 
 const NavContainer = styled.div`
@@ -47,7 +51,13 @@ const LogoTitle = styled.span`
   color: oklch(47% .157 37.304);
 
   @media (max-width: 420px) {
-    font-size: 0.7rem; 
+    font-size: 1.15rem; 
+  }
+  @media (max-width: 376px) {
+    font-size: 0.9rem; 
+  }
+  @media (max-width: 330px) {
+    font-size: 0.75rem; 
   }
 `;
 
@@ -57,7 +67,13 @@ const LogoSubtitle = styled.span`
   color: oklch(60% .05 200);
 
   @media (max-width: 420px) {
-    font-size: 0.60rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 376px) {
+    font-size: 0.7rem; 
+  }
+  @media (max-width: 330px) {
+    font-size: 0.6rem; 
   }
 `;
 

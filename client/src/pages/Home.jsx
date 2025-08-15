@@ -14,7 +14,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.1 2rem;
+  padding: 0 2rem;
+
+  @media (max-width: 1224px) {
+    padding: 4.5rem 2rem;
+  }
 `;
 
 const Content = styled.div`
@@ -157,7 +161,7 @@ const ImageBlock = styled.div`
 
     img {
       position: static !important;
-      width: 80%;
+      width: 90%;
       height: 260px;
     }
   }

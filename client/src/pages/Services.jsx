@@ -2,23 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// Paslaugų nuotraukos
+// Services
 import Service1 from '../assets/Service1.jpg';
 import Service2 from '../assets/Service2.jpg';
 import Service3 from '../assets/Service3.jpg';
 import Service4 from '../assets/Service4.jpg';
 
-// Gėrimų nuotraukos
+// Drinks
 import Drink1 from '../assets/Drink1.jpg';
 import Drink2 from '../assets/Drink2.jpg';
 import Drink3 from '../assets/Drink3.jpg';
 import Drink4 from '../assets/Drink4.jpg';
 import Drink5 from '../assets/Drink5.jpg';
+import Drink6 from '../assets/Drink6.jpg';
 
 const Container = styled.div`
   min-height: 100vh;
   background: linear-gradient(to bottom right, #FDF8F2, #f5fdf8);
-  padding: 2rem 1rem;
+  padding: 4.5rem 1rem;
   font-family: 'Poppins', sans-serif;
 `;
 
@@ -118,7 +119,7 @@ const BookButton = styled(Link)`
   }
 `;
 
-// Gėrimų sekcija
+// Drinks
 const DrinksSection = styled.div`
   background: white;
   padding: 1.5rem;
@@ -141,7 +142,7 @@ const DrinksTitle = styled.h2`
 
 const DrinksGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 `;
@@ -157,6 +158,26 @@ const DrinkCard = styled.div`
   &:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transform: scale(1.03);
+  }
+`;
+
+const Drink5Card = styled(DrinkCard)`
+  display: none;
+
+  @media (min-width: 1px) and (max-width: 844px) {
+    display: block;
+  }
+
+  @media (min-width: 1036px) {
+    display: block;
+  }
+`;
+
+const Drink6Card = styled(DrinkCard)`
+  display: none;
+
+  @media (min-width: 462px) and (max-width: 844px) {
+    display: block;
   }
 `;
 
@@ -250,12 +271,18 @@ const Services = () => {
               <strong>Iced Tea</strong>
             </DrinkInfo>
           </DrinkCard>
-          <DrinkCard>
+          <Drink5Card>
             <DrinkImage src={Drink5} alt="Good mood" />
             <DrinkInfo>
-              <strong>Good Bali Mood</strong>
+              <strong>Good Mood</strong>
             </DrinkInfo>
-          </DrinkCard>
+          </Drink5Card>
+          <Drink6Card>
+            <DrinkImage src={Drink6} alt="Bali" />
+            <DrinkInfo>
+              <strong>Bali</strong>
+            </DrinkInfo>
+          </Drink6Card>
         </DrinksGrid>
       </DrinksSection>
     </Container>

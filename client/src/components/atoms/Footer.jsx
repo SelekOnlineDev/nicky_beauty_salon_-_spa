@@ -158,6 +158,7 @@ const Footer = () => {
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: "#14B8A6" }}
+              hover={{ color: "#F97316" }}
             >
               www.selek.site
             </FooterLinkA>

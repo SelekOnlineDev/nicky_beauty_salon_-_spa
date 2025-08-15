@@ -4,7 +4,7 @@ import AboutImage from '../assets/About.jpg';
 
 const Container = styled.div`
   background: linear-gradient(to bottom right, #FDF8F2, #f5fdf8);
-  padding: 4rem;
+  padding: 5.5rem 3rem;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
 `;
@@ -105,10 +105,9 @@ const ImageCard = styled.div`
 
 
 const Testimonials = styled.section`
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 4rem auto 0;
   padding: 0 1rem;
-  max-width: 1100px;
 `;
 
 const TestimonialHeading = styled.h3`
