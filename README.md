@@ -1,4 +1,5 @@
 EN
+
 The website https://nickybeauty.net/ is a clean, functional small business website built using ReactJS, with a focus on a cozy massage and beauty salon.
 Technical features: ReactJS front-end – modern and fast UI rendering, component design.
 A simple navigation bar that allows you to conveniently navigate the website.
@@ -15,6 +16,7 @@ Growth opportunities: React modules allow you to customize the user experience, 
 SEO and marketing: basic SEO and marketing platform support is provided.
 
 LT
+
 Puslapis https://nickybeauty.net/ – tai aiškus, funkcionalus mažo verslo tinklalapis, sukurtas naudojant ReactJS, su pagrindiniu dėmesiu jaukiam masažo ir grožio salonui. 
 Techninės ypatybės: ReactJS front‑endas – modernus ir greitas UI atvaizdavimas, komponentinis dizainas.
 Paprastas navigacijos baras, leidžiantis patogiai naršyti sveteinėje. 
