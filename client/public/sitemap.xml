@@ -3,7 +3,7 @@
   
   <!-- Main -->
   <url>
-    <loc>https://www.selek.site/</loc>
+    <loc>https://www.nickybeauty/</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Home -->
   <url>
-    <loc>https://www.selek.site/home</loc>
+    <loc>https://www.nickybeauty/home</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Services -->
   <url>
-    <loc>https://www.selek.site/services</loc>
+    <loc>https://www.nickybeauty/services</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Offers -->
   <url>
-    <loc>https://www.selek.site/about</loc>
+    <loc>https://www.nickybeauty/about</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://www.selek.site/contact</loc>
+    <loc>https://www.nickybeauty/contact</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
