@@ -3,7 +3,7 @@
   
   <!-- Main -->
   <url>
-    <loc>https://www.nickybeauty/</loc>
+    <loc>https://www.nickybeauty.net/</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Home -->
   <url>
-    <loc>https://www.nickybeauty/home</loc>
+    <loc>https://www.nickybeauty.net/home</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Services -->
   <url>
-    <loc>https://www.nickybeauty/services</loc>
+    <loc>https://www.nickybeauty.net/services</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Offers -->
   <url>
-    <loc>https://www.nickybeauty/about</loc>
+    <loc>https://www.nickybeauty.net/about</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://www.nickybeauty/contact</loc>
+    <loc>https://www.nickybeauty.net/contact</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
